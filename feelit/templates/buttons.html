@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Based Music Recommendation System</title>
+    <link rel="stylesheet" href="/static/button_style.css">
+</head>
+<body>
+    <div class="header">
+
+
+        <div class="content">
+            <div class="output">
+                {% if final_output %}
+
+
+
+                    {% if final_output == 'happy' %}
+                        <h1>You look so happy! Let's celebrate this moment!</h1>
+                    {% elif final_output == 'sad' %}
+                        <h1>Feeling down? Let's find something to lift your spirits!</h1>
+                    {% elif final_output == 'angry' %}
+                        <h1>You seem angry. How about some calming music?</h1>
+                    {% elif final_output == 'disgust' %}
+                        <h1>Yikes, feeling disgusted? Let's change that mood!</h1>
+                    {% elif final_output == 'fear' %}
+                        <h1>Scared? Let's listen to something comforting.</h1>
+                    {% elif final_output == 'neutral' %}
+                        <h1>Looking neutral? Let's find something interesting!</h1>
+                    {% elif final_output == 'surprise' %}
+                        <h1>Surprised? Let's keep that excitement going!</h1>
+                    {% endif %}
+                {% endif %}
+            </div>
+             <button> <a href="http://localhost:5000/songs/{{final_output}}" class="search-button">Select Playlist </a></button>
+        </div>
+    </div>
+
+    <script src=""></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeelLit</title>
+    <link rel="shortcut icon" href="../static/real.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #171717;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        background-color: black;
+        z-index: 1000;
+    }
+    #home {
+        height: 600px;
+    }
+    #about {
+        height: 300px;
+    }
+    #contact {
+        height: 400px;
+    }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 20px;
+        color: #5D3FD3;
+    }
+    .logo img {
+        inline-size: 2pc;
+    }
+    nav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-link {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .nav-link:hover {
+        color: #5D3FD3;
+    }
+    main {
+        width: 100%;
+        padding-top: 80px; /* Space for fixed header */
+    }
+    .intro {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    .intro video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    .intro h1 {
+        font-size: 48px;
+        text-align: center;
+        z-index: 1;
+        margin-bottom: 0px;
+    }
+    .highlight {
+        color: #5D3FD3;
+    }
+    .intro p {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 0px;
+        z-index: 1;
+        margin-bottom: 0.3px;
+    }
+    .search-button {
+        background-color: white;
+        color: black;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+    .search-button:hover {
+        background-color: #5D3FD3;
+        color: black;
+    }
+    .contact {
+        background-color: #1a1a2e;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        width: 700px;
+        max-width: 100%;
+        margin: 40px auto;
+    }
+    .contact h1 {
+        font-size: 36px;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .contact p {
+        font-size: 20px;
+        margin: 5px 0;
+        margin-bottom: 1px;
+    }
+    .contact p a {
+        color: white;
+        text-decoration: none;
+        font-weight: lighter;
+    }
+    .contact p a:hover {
+        color: #5D3FD3;
+    }
+    .highlight1 {
+        font-weight: bold;
+        color: white;
+    }
+    .map {
+        margin-top: 20px;
+    }
+    .map iframe {
+        width: 100%;
+        height: 450px;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+    .about {
+        background-color: #1a1a2e;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        width: 70%;
+        max-width: 100%;
+        margin: 40px auto;
+    }
+    .about h1 {
+        font-size: 36px;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .about p {
+        font-size: 20px;
+        text-align: left;
+        margin: 10px 0;
+        line-height: 1.5;
+        color: white;
+    }
+</style>
+<body>
+    <header>
+        <div class="logo"> <img src="../static/loo.png"> FeelLit</div>
+        <nav>
+            <a href="#intro" class="nav-link">Home</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#about" class="nav-link">About</a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro" id="intro">
+            <h1>Browse. Choose. <span class="highlight">Chill.</span></h1>
+            <p>Discover music that matches your emotions.</p>
+            <a href="http://localhost:5000/camera" class="search-button">Search for Music</a>
+            <video autoplay muted loop>
+                <source src="./static/video" type="video/mp4">
+            </video>
+        </section>
+        <section class="contact" id="contact">
+            <h1>Contact</h1>
+            <p><span class="highlight1">Email: <a href="mailto:feellitweb@gmail.com">feellitweb@gmail.com</a></span></p>
+            <p><span class="highlight1">Phone: <a href="tel:+919898908321">+91 98989 08321</a></span></p>
+            <p>MLRIT, Dundigal, Telangana</p>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.8200778323917!2d78.43988709583624!3d17.594421309215054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b8eae5cd739%3A0x2aa927e931d97eee!2sMLR%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1721117866503!5m2!1sen!2sin" width="440" height="200" style="border: 1px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </section>
+        <section class="about" id="about">
+            <h1>About</h1>
+            <p>Welcome to Feel-It, an innovative emotion-based music system designed to transform your listening experience.</p>
+            <p>At Feel-It, we believe that music is more than just sound—it's a powerful emotional tool that can enhance your mood, provide comfort, and even inspire you.</p>
+            <p><span class="highlight1">JOIN US:</span></p>
+            <p>Discover the magic of music that truly understands you. Join the Feel-It community today and let your emotions guide your musical journey.</p>
+        </section>
+    </main>
+</body>
+</html>
